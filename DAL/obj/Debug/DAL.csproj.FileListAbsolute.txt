@@ -1,0 +1,24 @@
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\DAL.dll.config
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\DAL.dll
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\DAL.pdb
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\EntityFramework.dll
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\EntityFramework.xml
+D:\Đồ án cô hảoo\QLTHP\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Đồ án cô hảoo\QLTHP\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Đồ án cô hảoo\QLTHP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Đồ án cô hảoo\QLTHP\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Đồ án cô hảoo\QLTHP\DAL\obj\Debug\DAL.dll
+D:\Đồ án cô hảoo\QLTHP\DAL\obj\Debug\DAL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\DAL.dll.config
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\DAL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\EntityFramework.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\EntityFramework.xml
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Debug\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,23 @@
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\BLL.dll
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\BLL.pdb
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\DAL.dll
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\EntityFramework.dll
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\DAL.pdb
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\DAL.dll.config
+D:\Đồ án cô hảoo\QLTHP\BLL\bin\Debug\EntityFramework.xml
+D:\Đồ án cô hảoo\QLTHP\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Đồ án cô hảoo\QLTHP\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Đồ án cô hảoo\QLTHP\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Đồ án cô hảoo\QLTHP\BLL\obj\Debug\BLL.dll
+D:\Đồ án cô hảoo\QLTHP\BLL\obj\Debug\BLL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\BLL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\BLL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\DAL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\DAL.dll.config
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Debug\EntityFramework.xml
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Debug\BLL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Debug\BLL.pdb
