@@ -57,10 +57,13 @@ namespace GUI
             gvHEDT.Columns.Clear();
             gvHEDT.PopulateColumns();
 
-
+            // ✅ Ẩn cột DSLOP (navigation property)
+            if (gvHEDT.Columns["DSLOP"] != null)
+                gvHEDT.Columns["DSLOP"].Visible = false;
 
             gvHEDT.BestFitColumns();
         }
+
 
         private void gvHEDT_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {

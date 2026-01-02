@@ -46,6 +46,7 @@ namespace GUI
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddNew = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
             this.cboDIENUIT = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@ namespace GUI
             this.txtHOTEN = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMASV = new DevExpress.XtraEditors.TextEdit();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.lkpKyHP = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDSSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDSSV)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -65,6 +68,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHOTEN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcDSSV
@@ -201,6 +205,8 @@ namespace GUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lkpKyHP);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtMaLop);
             this.groupBox1.Controls.Add(this.cboDIENUIT);
             this.groupBox1.Controls.Add(this.label6);
@@ -217,6 +223,15 @@ namespace GUI
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(474, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Học Kỳ";
             // 
             // txtMaLop
             // 
@@ -305,6 +320,15 @@ namespace GUI
             this.txtMASV.Size = new System.Drawing.Size(125, 22);
             this.txtMASV.TabIndex = 2;
             // 
+            // lkpKyHP
+            // 
+            this.lkpKyHP.Location = new System.Drawing.Point(532, 50);
+            this.lkpKyHP.Name = "lkpKyHP";
+            this.lkpKyHP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkpKyHP.Size = new System.Drawing.Size(125, 22);
+            this.lkpKyHP.TabIndex = 21;
+            // 
             // frmDSSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -331,6 +355,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHOTEN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,5 +391,8 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtMASV;
         private DevExpress.XtraEditors.TextEdit txtMaLop;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private DevExpress.XtraEditors.LookUpEdit lkpKyHP;
     }
 }

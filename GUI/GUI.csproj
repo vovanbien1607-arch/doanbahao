@@ -113,11 +113,11 @@
     <Compile Include="RibbonFormMain.Designer.cs">
       <DependentUpon>RibbonFormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="rptPhieuThuHocPhi.cs">
+    <Compile Include="XtraReport_ThuHocPhi.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="rptPhieuThuHocPhi.Designer.cs">
-      <DependentUpon>rptPhieuThuHocPhi.cs</DependentUpon>
+    <Compile Include="XtraReport_ThuHocPhi.Designer.cs">
+      <DependentUpon>XtraReport_ThuHocPhi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FluentDesignForm_Main.resx">
       <DependentUpon>FluentDesignForm_Main.cs</DependentUpon>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="RibbonFormMain.resx">
       <DependentUpon>RibbonFormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptPhieuThuHocPhi.resx">
-      <DependentUpon>rptPhieuThuHocPhi.cs</DependentUpon>
+    <EmbeddedResource Include="XtraReport_ThuHocPhi.resx">
+      <DependentUpon>XtraReport_ThuHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

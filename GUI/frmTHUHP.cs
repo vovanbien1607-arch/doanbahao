@@ -317,7 +317,7 @@ namespace GUI
                 return;
             }
 
-            var rpt = new rptPhieuThuHocPhi();
+            var rpt = new XtraReport_ThuHocPhi();
             rpt.Parameters["pMASV"].Value = lueMASV.EditValue.ToString();
             rpt.Parameters["pMAHP"].Value = lueMAHP.EditValue.ToString();
             rpt.RequestParameters = false;

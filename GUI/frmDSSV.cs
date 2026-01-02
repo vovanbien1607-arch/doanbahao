@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
 using BLL;
-using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Base;
 using DAL.Model;
+
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace GUI
 {
@@ -12,11 +17,22 @@ namespace GUI
         private bool isAdding = false;
         private readonly DSSV_BLL svBLL = new DSSV_BLL();
 
+        // ====== SQL Connection ======
+        private SqlConnection conn = null;
+        private readonly string ctrConn =
+            @"server=(localdb)\MSSQLLocalDB;Database=QuanLyThuHocPhi;Integrated Security=true";
+
+        // ====== Lookup repo for Grid (MAHP -> KYHP) ======
+        private RepositoryItemLookUpEdit repoKyHP = null;
+
         public frmDSSV()
         {
             InitializeComponent();
 
-            // Gắn sự kiện
+            // ✅ Khởi tạo connection
+            conn = new SqlConnection(ctrConn);
+
+            // Events
             this.Load += frmDSSV_Load;
             gvDSSV.FocusedRowChanged += gvDSSV_FocusedRowChanged;
 
@@ -25,19 +41,24 @@ namespace GUI
             btnDelete.Click += btnDelete_Click;
             btnSave.Click += btnSave_Click;
             btnCancel.Click += btnCancel_Click;
-
         }
 
+        // ===================== FORM LOAD =====================
         private void frmDSSV_Load(object sender, EventArgs e)
         {
             try
             {
-                // Combo DIENUIT
+                // Combo DIENUIT (DevExpress ComboBoxEdit)
                 cboDIENUIT.Properties.Items.Clear();
                 cboDIENUIT.Properties.Items.AddRange(new object[] { "CÓ", "KHÔNG" });
                 cboDIENUIT.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
 
+                // ✅ Load học kỳ vào LookUpEdit trên form
+                LoadKyHocPhi_ToLookUpEdit();
+
+                // Load Grid + setup lookup MAHP trong grid (nếu có cột MAHP)
                 LoadGridDSSV();
+
                 DisableEdit();
 
                 // Focus dòng đầu
@@ -53,9 +74,51 @@ namespace GUI
             }
         }
 
+        // ===================== LOAD LOOKUPEDIT HỌC KỲ (TRÊN FORM) =====================
+        // Control LookUpEdit trên form phải tên: lkpKyHP
+        // Nếu bạn đặt tên khác (vd: cboHocKi) thì đổi lại trong code.
+        private void LoadKyHocPhi_ToLookUpEdit()
+        {
+            try
+            {
+                if (conn == null) conn = new SqlConnection(ctrConn);
+                if (conn.State != ConnectionState.Open) conn.Open();
+
+                DataTable dt = new DataTable();
+                using (SqlCommand cmd = new SqlCommand("SELECT MAHP, KYHP FROM HOCPHI ORDER BY MAHP", conn))
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+
+                // ====== LookUpEdit trên form ======
+                lkpKyHP.Properties.DataSource = dt;
+                lkpKyHP.Properties.DisplayMember = "KYHP";
+                lkpKyHP.Properties.ValueMember = "MAHP";
+                lkpKyHP.Properties.NullText = "";
+                lkpKyHP.Properties.ShowHeader = false;
+
+                lkpKyHP.Properties.PopulateColumns();
+                if (lkpKyHP.Properties.Columns["MAHP"] != null)
+                    lkpKyHP.Properties.Columns["MAHP"].Visible = false;
+
+                lkpKyHP.EditValue = null;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi load học kỳ: " + ex.Message, "Lỗi");
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+
+        // ===================== LOAD GRID =====================
         private void LoadGridDSSV()
         {
-            var data = svBLL.GetListStaff();   // dữ liệu join (có thể có TENLOP, TENHE...)
+            var data = svBLL.GetListStaff();   // nếu join THUHP thì sẽ có MAHP, KYHP...
 
             gcDSSV.DataSource = null;
             gcDSSV.DataSource = data;
@@ -63,10 +126,63 @@ namespace GUI
             gvDSSV.Columns.Clear();
             gvDSSV.PopulateColumns();
 
+            // ✅ Nếu datasource có MAHP thì setup lookup cho cột MAHP trong grid
+            SetupKyHocPhi_LookUpEdit_ForGrid();
+
             gcDSSV.RefreshDataSource();
             gvDSSV.BestFitColumns();
         }
 
+        // ===================== LOOKUPEDIT HỌC KỲ TRONG GRID (CỘT MAHP) =====================
+        private void SetupKyHocPhi_LookUpEdit_ForGrid()
+        {
+            // Nếu data không có cột MAHP thì bỏ qua (không lỗi)
+            if (gvDSSV.Columns["MAHP"] == null) return;
+
+            try
+            {
+                if (conn == null) conn = new SqlConnection(ctrConn);
+                if (conn.State != ConnectionState.Open) conn.Open();
+
+                // tạo repo 1 lần
+                if (repoKyHP == null)
+                {
+                    DataTable dt = new DataTable();
+                    using (SqlCommand cmd = new SqlCommand("SELECT MAHP, KYHP FROM HOCPHI ORDER BY MAHP", conn))
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+
+                    repoKyHP = new RepositoryItemLookUpEdit();
+                    repoKyHP.DataSource = dt;
+                    repoKyHP.DisplayMember = "KYHP";
+                    repoKyHP.ValueMember = "MAHP";
+                    repoKyHP.NullText = "";
+                    repoKyHP.ShowHeader = false;
+
+                    repoKyHP.PopulateColumns();
+                    if (repoKyHP.Columns["MAHP"] != null)
+                        repoKyHP.Columns["MAHP"].Visible = false;
+
+                    gcDSSV.RepositoryItems.Add(repoKyHP);
+                }
+
+                gvDSSV.Columns["MAHP"].Caption = "Học kỳ";
+                gvDSSV.Columns["MAHP"].ColumnEdit = repoKyHP;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi setup học kỳ trong grid: " + ex.Message, "Lỗi");
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+
+        // ===================== GRID EVENTS =====================
         private void gvDSSV_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             if (gvDSSV.FocusedRowHandle < 0) return;
@@ -86,10 +202,14 @@ namespace GUI
 
             var dienut = gvDSSV.GetFocusedRowCellValue("DIENUIT");
             cboDIENUIT.EditValue = (dienut == null || dienut == DBNull.Value) ? null : dienut.ToString();
+
+            // ✅ Bind Học kỳ lên LookUpEdit (lkpKyHP)
+            var mahp = gvDSSV.GetFocusedRowCellValue("MAHP");
+            lkpKyHP.EditValue = (mahp == null || mahp == DBNull.Value) ? null : mahp.ToString();
         }
 
-        // ===================== BUTTONS =====================
 
+        // ===================== BUTTONS =====================
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             isAdding = true;
@@ -97,11 +217,7 @@ namespace GUI
             ClearFields();
             EnableEdit();
 
-            txtMASV.Enabled = true;     // cho nhập mã mới
-            txtMASV.Focus();
-
-            // Để tránh grid đổi dòng làm mất trạng thái add new
-            gvDSSV.Focus();
+            txtMASV.Enabled = true;
             txtMASV.Focus();
         }
 
@@ -116,7 +232,7 @@ namespace GUI
             isAdding = false;
             EnableEdit();
 
-            txtMASV.Enabled = false; // không cho sửa MASV
+            txtMASV.Enabled = false;
             txtHOTEN.Focus();
         }
 
@@ -134,7 +250,6 @@ namespace GUI
 
             try
             {
-                // Nếu BLL bạn đang static: DSSV_BLL.Delete(txtMASV.Text.Trim());
                 svBLL.Delete(txtMASV.Text.Trim());
 
                 LoadGridDSSV();
@@ -173,13 +288,11 @@ namespace GUI
             {
                 if (isAdding)
                 {
-                    // Nếu BLL bạn đang static: DSSV_BLL.Insert(sv);
                     svBLL.Insert(sv);
                     XtraMessageBox.Show("Thêm sinh viên thành công!");
                 }
                 else
                 {
-                    // Nếu BLL bạn đang static: DSSV_BLL.Update(sv);
                     svBLL.Update(sv);
                     XtraMessageBox.Show("Cập nhật thành công!");
                 }
@@ -187,17 +300,12 @@ namespace GUI
                 LoadGridDSSV();
                 DisableEdit();
 
-                // focus lại đúng dòng vừa lưu
                 int handle = gvDSSV.LocateByValue("MASV", sv.MASV);
                 gvDSSV.FocusedRowHandle = (handle >= 0) ? handle : 0;
                 BindCurrentRowToControls();
             }
             catch (Exception ex)
             {
-                // Lỗi add new hay gặp:
-                // - MASV trùng (PK)
-                // - MALO không tồn tại (FK DSLOP)
-                // - NGAYSINH null/format
                 XtraMessageBox.Show("Lỗi khi lưu: " + ex.Message, "Lỗi");
             }
         }
@@ -214,22 +322,17 @@ namespace GUI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            var rs = DevExpress.XtraEditors.XtraMessageBox.Show(
-         "Bạn có chắc muốn thoát chương trình không?",
-         "Xác nhận thoát",
-         MessageBoxButtons.YesNo,
-         MessageBoxIcon.Question
-          );
+            var rs = XtraMessageBox.Show(
+                "Bạn có chắc muốn thoát chương trình không?",
+                "Xác nhận thoát",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             if (rs == DialogResult.Yes)
-            {
                 this.Close();
-
-
-            }
         }
-        // ===================== UI STATE =====================
 
+        // ===================== UI STATE =====================
         private void ClearFields()
         {
             txtMASV.Text = "";
@@ -237,18 +340,22 @@ namespace GUI
             deNGAYSINH.EditValue = null;
             txtMaLop.Text = "";
             cboDIENUIT.EditValue = null;
+
+            // học kỳ (trên form)
+            lkpKyHP.EditValue = null;
         }
 
         private void EnableEdit()
         {
-            // Mở nhập liệu
-            txtMASV.Enabled = true; // AddNew cần, Update sẽ disable lại
+            txtMASV.Enabled = true;
             txtHOTEN.Enabled = true;
             deNGAYSINH.Enabled = true;
             txtMaLop.Enabled = true;
             cboDIENUIT.Enabled = true;
 
-            // Nút
+            // học kỳ (trên form) - nếu bạn muốn cho phép chọn để lọc/thu hp
+            lkpKyHP.Enabled = true;
+
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
 
@@ -259,14 +366,15 @@ namespace GUI
 
         private void DisableEdit()
         {
-            // Khóa nhập liệu
             txtMASV.Enabled = false;
             txtHOTEN.Enabled = false;
             deNGAYSINH.Enabled = false;
             txtMaLop.Enabled = false;
             cboDIENUIT.Enabled = false;
 
-            // Nút
+            // học kỳ (trên form)
+            lkpKyHP.Enabled = false;
+
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
 
@@ -306,24 +414,7 @@ namespace GUI
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(cboDIENUIT.EditValue?.ToString()))
-            {
-                XtraMessageBox.Show("Vui lòng chọn diện ưu tiên!");
-                return false;
-            }
-
-            // Bắt buộc chỉ cho CÓ/KHÔNG
-            var d = cboDIENUIT.EditValue?.ToString();
-            if (d != "CÓ" && d != "KHÔNG")
-            {
-                XtraMessageBox.Show("Diện ưu tiên chỉ được chọn: CÓ hoặc KHÔNG!");
-                cboDIENUIT.Focus();
-                return false;
-            }
-
             return true;
         }
-
-       
     }
 }

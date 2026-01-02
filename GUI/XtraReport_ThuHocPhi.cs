@@ -6,13 +6,12 @@ using System.Drawing;
 
 namespace GUI
 {
-    public partial class rptPhieuThuHocPhi : DevExpress.XtraReports.UI.XtraReport
+    public partial class XtraReport_ThuHocPhi : DevExpress.XtraReports.UI.XtraReport
     {
-        public rptPhieuThuHocPhi()
+        public XtraReport_ThuHocPhi()
         {
             InitializeComponent();
         }
 
     }
-
 }

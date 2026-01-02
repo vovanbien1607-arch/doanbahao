@@ -13,19 +13,36 @@ namespace DAL
             var list =
                 (from sv in db.DSSV
                  join lop in db.DSLOP on sv.MALO equals lop.MALO
-               
+
+      
+         let lastThu = db.THUHP
+                                .Where(t => t.MASV == sv.MASV)
+                                .OrderByDescending(t => t.NGAYTHU)
+                                .FirstOrDefault()
+
+      
+         let ky = (lastThu == null)
+                            ? null
+                            : db.HOCPHI.Where(h => h.MAHP == lastThu.MAHP)
+                                       .Select(h => h.KYHP)
+                                       .FirstOrDefault()
+
                  select new
                  {
                      sv.MASV,
                      sv.HOTEN,
                      sv.NGAYSINH,
                      sv.MALO,
-     
-                     sv.DIENUIT
+                     sv.DIENUIT,
+
+             // ✅ thêm vào grid
+             MAHP = (lastThu == null ? null : lastThu.MAHP),
+                     KYHP = ky
                  }).ToList();
 
             return list;
         }
+
 
         public bool Exists(string masv)
         {
