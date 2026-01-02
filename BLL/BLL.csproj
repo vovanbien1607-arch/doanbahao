@@ -50,6 +50,7 @@
     <Compile Include="HOCPHI_Lookup_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="THUHP_BLL.cs" />
+    <Compile Include="User_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

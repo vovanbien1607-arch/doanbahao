@@ -1,11 +1,6 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GUI
@@ -15,48 +10,111 @@ namespace GUI
         public FluentDesignForm_Main()
         {
             InitializeComponent();
-            // REMOVE THIS LINE: FluentDesignForm does not support standard MDI
-            // this.IsMdiContainer = true; 
+
+            // Gắn sự kiện click menu hệ thống (nếu bạn chưa gắn trong designer)
+            acDangNhap.Click += acDangNhap_Click;
+            acDangKy.Click += acDangKy_Click;
+            acDoiMK.Click += acDoiMK_Click;
+            acDangXuat.Click += acDangXuat_Click;
+
+            // Gắn sự kiện click danh mục
+            aceDssv.Click += aceDssv_Click;
+            aceDSL.Click += aceDSL_Click;
+            aceHedt.Click += aceHedt_Click;
+            aceThhp.Click += aceThhp_Click;
+
+            this.Load += FluentDesignForm_Main_Load;
         }
 
-        // 1. Updated isOpen to check the Container controls instead of MdiChildren
+        // ===================== FORM LOAD: mở login luôn =====================
+        private void FluentDesignForm_Main_Load(object sender, EventArgs e)
+        {
+            ApplyAuthUI();       // khóa danh mục trước
+
+            // ✅ mở form đăng nhập ngay khi chạy chương trình
+            ShowLogin();
+        }
+
+        // ===================== KIỂM TRA FORM ĐANG MỞ =====================
         private Form isOpen(Type ftype)
         {
-            // Check inside the Fluent Container
             foreach (Control c in this.fluentDesignFormContainer1.Controls)
             {
                 if (c.GetType() == ftype)
-                {
                     return c as Form;
-                }
             }
             return null;
         }
 
-        // 2. Helper method to avoid repeating code
+        // ===================== MỞ FORM CON =====================
         private void OpenChildForm(Form f)
         {
+            // ✅ bắt buộc login mới mở được danh mục
+            if (!Session.IsLoggedIn)
+            {
+                XtraMessageBox.Show("Vui lòng đăng nhập để sử dụng chức năng Danh mục!");
+                ShowLogin();
+                return;
+            }
+
             Form existing = isOpen(f.GetType());
 
             if (existing == null)
             {
-                f.TopLevel = false;                  // Important: Allows form to be inside another
-                f.FormBorderStyle = FormBorderStyle.None; // Remove border/title bar
-                f.Dock = DockStyle.Fill;             // Fill the container
+                f.TopLevel = false;
+                f.FormBorderStyle = FormBorderStyle.None;
+                f.Dock = DockStyle.Fill;
 
-                this.fluentDesignFormContainer1.Controls.Add(f); // Add to container
-                this.fluentDesignFormContainer1.Tag = f;         // Optional: Track active form
+                this.fluentDesignFormContainer1.Controls.Add(f);
+                this.fluentDesignFormContainer1.Tag = f;
 
                 f.Show();
                 f.BringToFront();
             }
             else
             {
-                existing.BringToFront();             // Bring existing form to view
-                // existing.Activate() doesn't work well with embedded forms, use BringToFront
+                existing.BringToFront();
             }
         }
 
+        // ===================== KHÓA / MỞ MENU THEO LOGIN =====================
+        private void ApplyAuthUI()
+        {
+            bool logged = Session.IsLoggedIn;
+
+            // ✅ Khóa/Mở group Danh Mục
+            // !!! ĐỔI "acGroupDanhMuc" đúng tên group Danh Mục của bạn trong Designer
+            acGroupDanhMuc.Enabled = logged;
+
+            // Hệ thống
+            acDangNhap.Enabled = !logged;
+            acDangKy.Enabled = !logged;
+
+            acDoiMK.Enabled = logged;
+            acDangXuat.Enabled = logged;
+        }
+
+        // ===================== HIỆN FORM LOGIN =====================
+        private void ShowLogin()
+        {
+            using (var f = new frmLogin())
+            {
+                var rs = f.ShowDialog();
+
+                if (rs == DialogResult.OK)
+                {
+                    ApplyAuthUI();
+                    XtraMessageBox.Show("Đăng nhập thành công!");
+                }
+                else
+                {
+                    // Nếu user bấm đóng login mà chưa đăng nhập -> vẫn khóa danh mục
+                    ApplyAuthUI();
+                }
+            }
+        }
+
+        // ===================== CLICK DANH MỤC =====================
         private void aceThhp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmTHUHP());
@@ -75,6 +133,57 @@ namespace GUI
         private void aceDssv_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmDSSV());
+        }
+
+        // ===================== CLICK HỆ THỐNG =====================
+        private void acDangNhap_Click(object sender, EventArgs e)
+        {
+            if (Session.IsLoggedIn)
+            {
+                XtraMessageBox.Show("Bạn đã đăng nhập rồi!");
+                return;
+            }
+            ShowLogin();
+        }
+
+        private void acDangKy_Click(object sender, EventArgs e)
+        {
+            using (var f = new frmRegister())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void acDoiMK_Click(object sender, EventArgs e)
+        {
+            using (var f = new frmChangePassword())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void acDangXuat_Click(object sender, EventArgs e)
+        {
+            if (!Session.IsLoggedIn) return;
+
+            if (XtraMessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+
+            // logout
+            Session.Clear();
+            ApplyAuthUI();
+
+            // đóng hết form con đang mở
+            this.fluentDesignFormContainer1.Controls.Clear();
+
+            XtraMessageBox.Show("Đã đăng xuất!");
+            ShowLogin(); // nếu bạn muốn logout là bắt login lại ngay
+        }
+
+        private void accordionControlElement3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -303,3 +303,8 @@ D:\WinDows Forms\Đồ án\QLTHP\GUI\bin\Debug\es\DevExpress.Diagram.v19.2.Core.
 D:\WinDows Forms\Đồ án\QLTHP\GUI\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 D:\WinDows Forms\Đồ án\QLTHP\GUI\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
 D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.XtraReport_ThuHocPhi.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.XtraReport_BaoCaoDoanhThu.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.XtraReport_DSSVnoHP.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmChangePassword.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmLogin.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmRegister.resources

@@ -81,6 +81,12 @@
     <Compile Include="FluentDesignForm_Main.Designer.cs">
       <DependentUpon>FluentDesignForm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSLOP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,18 @@
     <Compile Include="frmHEDT.Designer.cs">
       <DependentUpon>frmHEDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTHUHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +131,19 @@
     <Compile Include="RibbonFormMain.Designer.cs">
       <DependentUpon>RibbonFormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="XtraReport_BaoCaoDoanhThu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_BaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>XtraReport_BaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_DSSVnoHP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_DSSVnoHP.Designer.cs">
+      <DependentUpon>XtraReport_DSSVnoHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraReport_ThuHocPhi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -122,6 +153,9 @@
     <EmbeddedResource Include="FluentDesignForm_Main.resx">
       <DependentUpon>FluentDesignForm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSLOP.resx">
       <DependentUpon>frmDSLOP.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHEDT.resx">
       <DependentUpon>frmHEDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTHUHP.resx">
       <DependentUpon>frmTHUHP.cs</DependentUpon>
@@ -146,6 +186,12 @@
     </Compile>
     <EmbeddedResource Include="RibbonFormMain.resx">
       <DependentUpon>RibbonFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_BaoCaoDoanhThu.resx">
+      <DependentUpon>XtraReport_BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_DSSVnoHP.resx">
+      <DependentUpon>XtraReport_DSSVnoHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport_ThuHocPhi.resx">
       <DependentUpon>XtraReport_ThuHocPhi.cs</DependentUpon>

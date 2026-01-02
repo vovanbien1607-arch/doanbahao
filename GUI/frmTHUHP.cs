@@ -309,20 +309,6 @@ namespace GUI
             return true;
         }
 
-        private void btnInPhieu_Click(object sender, EventArgs e)
-        {
-            if (lueMASV.EditValue == null || lueMAHP.EditValue == null)
-            {
-                XtraMessageBox.Show("Chọn Sinh viên và Học kỳ để in phiếu!");
-                return;
-            }
-
-            var rpt = new XtraReport_ThuHocPhi();
-            rpt.Parameters["pMASV"].Value = lueMASV.EditValue.ToString();
-            rpt.Parameters["pMAHP"].Value = lueMAHP.EditValue.ToString();
-            rpt.RequestParameters = false;
-
-            rpt.ShowPreviewDialog();
-        }
+        
     }
 }

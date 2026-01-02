@@ -54,7 +54,6 @@ namespace GUI
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnInPhieu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gcTHUHP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTHUHP)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -194,7 +193,6 @@ namespace GUI
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnInPhieu);
             this.groupBox1.Controls.Add(this.deNGAYTHU);
             this.groupBox1.Controls.Add(this.lueMAHP);
             this.groupBox1.Controls.Add(this.lueMASV);
@@ -306,16 +304,6 @@ namespace GUI
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã SV";
             // 
-            // btnInPhieu
-            // 
-            this.btnInPhieu.Location = new System.Drawing.Point(493, 53);
-            this.btnInPhieu.Name = "btnInPhieu";
-            this.btnInPhieu.Size = new System.Drawing.Size(75, 23);
-            this.btnInPhieu.TabIndex = 21;
-            this.btnInPhieu.Text = "In Phiếu";
-            this.btnInPhieu.UseVisualStyleBackColor = true;
-            this.btnInPhieu.Click += new System.EventHandler(this.btnInPhieu_Click);
-            // 
             // frmTHUHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -372,6 +360,5 @@ namespace GUI
         private DevExpress.XtraEditors.LookUpEdit lueMAHP;
         private DevExpress.XtraEditors.LookUpEdit lueMASV;
         private DevExpress.XtraEditors.DateEdit deNGAYTHU;
-        private System.Windows.Forms.Button btnInPhieu;
     }
 }
