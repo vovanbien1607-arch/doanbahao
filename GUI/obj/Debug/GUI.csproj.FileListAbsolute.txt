@@ -308,3 +308,4 @@ D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.XtraReport_DSSVnoHP.resources
 D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmChangePassword.resources
 D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmLogin.resources
 D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmRegister.resources
+D:\WinDows Forms\Đồ án\QLTHP\GUI\obj\Debug\GUI.frmReportViewer.resources

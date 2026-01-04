@@ -117,6 +117,12 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTHUHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTHUHP.resx">
       <DependentUpon>frmTHUHP.cs</DependentUpon>

@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Windows.Forms;
 
@@ -135,7 +136,7 @@ namespace GUI
             OpenChildForm(new frmDSSV());
         }
 
-        // ===================== CLICK HỆ THỐNG =====================
+       
         private void acDangNhap_Click(object sender, EventArgs e)
         {
             if (Session.IsLoggedIn)
@@ -184,6 +185,29 @@ namespace GUI
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void acBaocaodoanhthu_Click(object sender, EventArgs e)
+        {
+           
+            XtraReport rpt = new XtraReport_BaoCaoDoanhThu();
+            OpenChildForm(new frmReportViewer(rpt, "BÁO CÁO DOANH THU"));
+        }
+
+        private void acThongkehocphi_Click(object sender, EventArgs e)
+        {
+           
+
+           
+            XtraReport rpt = new XtraReport_ThuHocPhi();
+            OpenChildForm(new frmReportViewer(rpt, "BÁO CÁO THU HỌC PHÍ"));
+        }
+
+        private void acDssvnohp_Click(object sender, EventArgs e)
+        {
+           
+            XtraReport rpt = new XtraReport_DSSVnoHP();
+            OpenChildForm(new frmReportViewer(rpt, "DANH SÁCH SV CÒN NỢ HỌC PHÍ"));
         }
     }
 }

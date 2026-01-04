@@ -151,7 +151,7 @@ namespace GUI
             this.btnexit.Size = new System.Drawing.Size(106, 40);
             this.btnexit.TabIndex = 30;
             this.btnexit.Text = "Exit";
-            this.btnexit.Click += new System.EventHandler(this.btnExit_Click);
+            
             // 
             // btnCancel
             // 

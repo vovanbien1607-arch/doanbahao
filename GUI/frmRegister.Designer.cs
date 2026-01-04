@@ -31,7 +31,6 @@ namespace GUI
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegister = new DevExpress.XtraEditors.SimpleButton();
             this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
@@ -40,6 +39,8 @@ namespace GUI
             this.txtFullName = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.btnexit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBack = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirm.Properties)).BeginInit();
@@ -64,17 +65,9 @@ namespace GUI
             this.label1.TabIndex = 13;
             this.label1.Text = "Tài khoản";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(392, 322);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(94, 29);
-            this.btnBack.TabIndex = 12;
-            this.btnBack.Text = "Đăng nhập";
-            // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(272, 322);
+            this.btnRegister.Location = new System.Drawing.Point(392, 345);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(94, 29);
             this.btnRegister.TabIndex = 11;
@@ -128,18 +121,37 @@ namespace GUI
             // 
             // btnexit
             // 
-            this.btnexit.Location = new System.Drawing.Point(162, 322);
+            this.btnexit.Location = new System.Drawing.Point(263, 345);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(94, 29);
             this.btnexit.TabIndex = 22;
             this.btnexit.Text = "Thoát";
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(402, 305);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(68, 16);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Đăng nhập";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(256, 305);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Bạn đã có tài khoản? ";
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 492);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFullName);
@@ -147,7 +159,6 @@ namespace GUI
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
@@ -165,7 +176,6 @@ namespace GUI
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton btnBack;
         private DevExpress.XtraEditors.SimpleButton btnRegister;
         private DevExpress.XtraEditors.TextEdit txtPass;
         private DevExpress.XtraEditors.TextEdit txtUser;
@@ -174,5 +184,7 @@ namespace GUI
         private DevExpress.XtraEditors.TextEdit txtFullName;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.SimpleButton btnexit;
+        private DevExpress.XtraEditors.HyperlinkLabelControl btnBack;
+        private System.Windows.Forms.Label label3;
     }
 }

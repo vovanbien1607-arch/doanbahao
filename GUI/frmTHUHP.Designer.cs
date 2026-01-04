@@ -71,7 +71,7 @@ namespace GUI
             this.gcTHUHP.Location = new System.Drawing.Point(67, 201);
             this.gcTHUHP.MainView = this.gvTHUHP;
             this.gcTHUHP.Name = "gcTHUHP";
-            this.gcTHUHP.Size = new System.Drawing.Size(976, 261);
+            this.gcTHUHP.Size = new System.Drawing.Size(976, 407);
             this.gcTHUHP.TabIndex = 39;
             this.gcTHUHP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTHUHP});

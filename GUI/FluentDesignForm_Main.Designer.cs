@@ -41,6 +41,10 @@ namespace GUI
             this.aceDSL = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceHedt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThhp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acBaocaodoanhthu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acThongkehocphi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acDssvnohp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentDesignFormContainer2 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
@@ -62,6 +66,7 @@ namespace GUI
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
             this.acGroupDanhMuc,
+            this.accordionControlElement2,
             this.accordionControlElement3});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
             this.accordionControl1.Name = "accordionControl1";
@@ -148,6 +153,37 @@ namespace GUI
             this.aceThhp.Text = "Thu học phí";
             this.aceThhp.Click += new System.EventHandler(this.aceThhp_Click);
             // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acBaocaodoanhthu,
+            this.acThongkehocphi,
+            this.acDssvnohp});
+            this.accordionControlElement2.Expanded = true;
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Text = "Thống kê";
+            // 
+            // acBaocaodoanhthu
+            // 
+            this.acBaocaodoanhthu.Name = "acBaocaodoanhthu";
+            this.acBaocaodoanhthu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acBaocaodoanhthu.Text = "Báo cao doanh thu";
+            this.acBaocaodoanhthu.Click += new System.EventHandler(this.acBaocaodoanhthu_Click);
+            // 
+            // acThongkehocphi
+            // 
+            this.acThongkehocphi.Name = "acThongkehocphi";
+            this.acThongkehocphi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acThongkehocphi.Text = "Thống kê học phí";
+            this.acThongkehocphi.Click += new System.EventHandler(this.acThongkehocphi_Click);
+            // 
+            // acDssvnohp
+            // 
+            this.acDssvnohp.Name = "acDssvnohp";
+            this.acDssvnohp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.acDssvnohp.Text = "DSSV nợ học phí";
+            this.acDssvnohp.Click += new System.EventHandler(this.acDssvnohp_Click);
+            // 
             // accordionControlElement3
             // 
             this.accordionControlElement3.Name = "accordionControlElement3";
@@ -207,5 +243,9 @@ namespace GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement acDangKy;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acDoiMK;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acDangXuat;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acBaocaodoanhthu;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acThongkehocphi;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acDssvnohp;
     }
 }
