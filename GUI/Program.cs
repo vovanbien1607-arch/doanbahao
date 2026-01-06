@@ -18,7 +18,13 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            SkinManager.EnableFormSkins();
 
+            // Chọn skin (đổi tên theo ý bạn)
+              SkinManager.EnableFormSkins();
+
+            // Chọn skin (đổi tên theo ý bạn)
+            UserLookAndFeel.Default.SetSkinStyle("Windows 7");
             //Application.Run(new frmDSLOP());
             //Application.Run(new RibbonFormMain());
             Application.Run(new FluentDesignForm_Main());

@@ -44,21 +44,21 @@ namespace GUI
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(359, 83);
+            this.txtUser.Location = new System.Drawing.Point(149, 40);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(125, 22);
+            this.txtUser.Size = new System.Drawing.Size(179, 22);
             this.txtUser.TabIndex = 0;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(359, 135);
+            this.txtPass.Location = new System.Drawing.Point(149, 92);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(125, 22);
+            this.txtPass.Size = new System.Drawing.Size(179, 22);
             this.txtPass.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(267, 257);
+            this.btnLogin.Location = new System.Drawing.Point(105, 219);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(94, 29);
             this.btnLogin.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace GUI
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(396, 257);
+            this.btnExit.Location = new System.Drawing.Point(234, 219);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(94, 29);
             this.btnExit.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 86);
+            this.label1.Location = new System.Drawing.Point(54, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(267, 138);
+            this.label2.Location = new System.Drawing.Point(57, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace GUI
             // 
             // linkChangePass
             // 
-            this.linkChangePass.Location = new System.Drawing.Point(408, 235);
+            this.linkChangePass.Location = new System.Drawing.Point(344, 98);
             this.linkChangePass.Name = "linkChangePass";
             this.linkChangePass.Size = new System.Drawing.Size(82, 16);
             this.linkChangePass.TabIndex = 6;
@@ -102,7 +102,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(303, 203);
+            this.label3.Location = new System.Drawing.Point(57, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 17);
             this.label3.TabIndex = 7;
@@ -110,7 +110,7 @@ namespace GUI
             // 
             // linkRegister
             // 
-            this.linkRegister.Location = new System.Drawing.Point(446, 200);
+            this.linkRegister.Location = new System.Drawing.Point(220, 176);
             this.linkRegister.Name = "linkRegister";
             this.linkRegister.Size = new System.Drawing.Size(44, 16);
             this.linkRegister.TabIndex = 8;
@@ -120,7 +120,7 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 491);
+            this.ClientSize = new System.Drawing.Size(471, 301);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkChangePass);
@@ -130,8 +130,10 @@ namespace GUI
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
+            this.IconOptions.LargeImage = global::GUI.Properties.Resources.bocustomer_32x32;
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             this.ResumeLayout(false);

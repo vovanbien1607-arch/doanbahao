@@ -46,6 +46,7 @@ namespace GUI
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddNew = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lkpKyHP = new DevExpress.XtraEditors.LookUpEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
             this.cboDIENUIT = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -58,17 +59,16 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.txtMASV = new DevExpress.XtraEditors.TextEdit();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.lkpKyHP = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDSSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDSSV)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDIENUIT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHOTEN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcDSSV
@@ -151,7 +151,6 @@ namespace GUI
             this.btnexit.Size = new System.Drawing.Size(106, 40);
             this.btnexit.TabIndex = 30;
             this.btnexit.Text = "Exit";
-            
             // 
             // btnCancel
             // 
@@ -219,15 +218,24 @@ namespace GUI
             this.groupBox1.Controls.Add(this.txtMASV);
             this.groupBox1.Location = new System.Drawing.Point(88, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(698, 101);
+            this.groupBox1.Size = new System.Drawing.Size(884, 101);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
+            // lkpKyHP
+            // 
+            this.lkpKyHP.Location = new System.Drawing.Point(560, 56);
+            this.lkpKyHP.Name = "lkpKyHP";
+            this.lkpKyHP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkpKyHP.Size = new System.Drawing.Size(125, 22);
+            this.lkpKyHP.TabIndex = 21;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(474, 52);
+            this.label5.Location = new System.Drawing.Point(502, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 19;
@@ -235,14 +243,14 @@ namespace GUI
             // 
             // txtMaLop
             // 
-            this.txtMaLop.Location = new System.Drawing.Point(529, 18);
+            this.txtMaLop.Location = new System.Drawing.Point(557, 24);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Size = new System.Drawing.Size(125, 22);
             this.txtMaLop.TabIndex = 17;
             // 
             // cboDIENUIT
             // 
-            this.cboDIENUIT.Location = new System.Drawing.Point(324, 50);
+            this.cboDIENUIT.Location = new System.Drawing.Point(362, 56);
             this.cboDIENUIT.Name = "cboDIENUIT";
             this.cboDIENUIT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -252,7 +260,7 @@ namespace GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(471, 21);
+            this.label6.Location = new System.Drawing.Point(499, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 13;
@@ -261,7 +269,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(236, 21);
+            this.label4.Location = new System.Drawing.Point(264, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 9;
@@ -270,7 +278,7 @@ namespace GUI
             // deNGAYSINH
             // 
             this.deNGAYSINH.EditValue = null;
-            this.deNGAYSINH.Location = new System.Drawing.Point(324, 16);
+            this.deNGAYSINH.Location = new System.Drawing.Point(362, 22);
             this.deNGAYSINH.Name = "deNGAYSINH";
             this.deNGAYSINH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -282,7 +290,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(246, 53);
+            this.label3.Location = new System.Drawing.Point(264, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 7;
@@ -291,7 +299,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 53);
+            this.label2.Location = new System.Drawing.Point(42, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 5;
@@ -299,7 +307,7 @@ namespace GUI
             // 
             // txtHOTEN
             // 
-            this.txtHOTEN.Location = new System.Drawing.Point(115, 50);
+            this.txtHOTEN.Location = new System.Drawing.Point(105, 56);
             this.txtHOTEN.Name = "txtHOTEN";
             this.txtHOTEN.Size = new System.Drawing.Size(125, 22);
             this.txtHOTEN.TabIndex = 4;
@@ -319,15 +327,6 @@ namespace GUI
             this.txtMASV.Name = "txtMASV";
             this.txtMASV.Size = new System.Drawing.Size(125, 22);
             this.txtMASV.TabIndex = 2;
-            // 
-            // lkpKyHP
-            // 
-            this.lkpKyHP.Location = new System.Drawing.Point(532, 50);
-            this.lkpKyHP.Name = "lkpKyHP";
-            this.lkpKyHP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkpKyHP.Size = new System.Drawing.Size(125, 22);
-            this.lkpKyHP.TabIndex = 21;
             // 
             // frmDSSV
             // 
@@ -349,13 +348,13 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.gvDSSV)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboDIENUIT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNGAYSINH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHOTEN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMASV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkpKyHP.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

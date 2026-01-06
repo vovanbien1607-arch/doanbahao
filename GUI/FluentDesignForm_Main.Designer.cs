@@ -57,7 +57,7 @@ namespace GUI
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 39);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(721, 462);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(918, 614);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // accordionControl1
@@ -71,7 +71,7 @@ namespace GUI
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 462);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 614);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -88,6 +88,7 @@ namespace GUI
             // 
             // acDangNhap
             // 
+            this.acDangNhap.ImageOptions.SvgImage = global::GUI.Properties.Resources.bo_lead;
             this.acDangNhap.Name = "acDangNhap";
             this.acDangNhap.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acDangNhap.Text = "Đăng nhập";
@@ -95,6 +96,7 @@ namespace GUI
             // 
             // acDangKy
             // 
+            this.acDangKy.ImageOptions.Image = global::GUI.Properties.Resources.bodetails_32x32;
             this.acDangKy.Name = "acDangKy";
             this.acDangKy.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acDangKy.Text = "Đăng ký";
@@ -102,6 +104,7 @@ namespace GUI
             // 
             // acDoiMK
             // 
+            this.acDoiMK.ImageOptions.Image = global::GUI.Properties.Resources.borole_32x32;
             this.acDoiMK.Name = "acDoiMK";
             this.acDoiMK.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acDoiMK.Text = "Đổi mật khẩu";
@@ -109,6 +112,7 @@ namespace GUI
             // 
             // acDangXuat
             // 
+            this.acDangXuat.ImageOptions.Image = global::GUI.Properties.Resources.bouser_32x32;
             this.acDangXuat.Name = "acDangXuat";
             this.acDangXuat.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acDangXuat.Text = "Đăng xuất";
@@ -195,7 +199,7 @@ namespace GUI
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(981, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1178, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -204,14 +208,14 @@ namespace GUI
             this.fluentDesignFormContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer2.Location = new System.Drawing.Point(0, 39);
             this.fluentDesignFormContainer2.Name = "fluentDesignFormContainer2";
-            this.fluentDesignFormContainer2.Size = new System.Drawing.Size(981, 462);
+            this.fluentDesignFormContainer2.Size = new System.Drawing.Size(1178, 614);
             this.fluentDesignFormContainer2.TabIndex = 3;
             // 
             // FluentDesignForm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 501);
+            this.ClientSize = new System.Drawing.Size(1178, 653);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
