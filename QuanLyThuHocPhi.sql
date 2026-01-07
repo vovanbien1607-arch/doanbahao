@@ -132,6 +132,83 @@ EXEC P_THUHP_SINHVIEN;
 SELECT MAHP, KYHP FROM HOCPHI ORDER BY MAHP
 
 
+
+CREATE OR ALTER PROCEDURE P_BC_SV_CONNO_HOCPHI
+    @MAHP CHAR(10)  -- ví dụ: HK1, HK2...
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        lop.MALO,
+        lop.TENLOP,
+
+        sv.MASV,
+        sv.HOTEN,
+
+        he.HPCB,                                  -- mức quy định
+
+        DaDong = ISNULL(SUM(th.SOTIEN), 0),       -- số tiền đã đóng
+        ConNo  = he.HPCB - ISNULL(SUM(th.SOTIEN), 0)  -- số tiền còn nợ
+    FROM DSSV sv
+    JOIN DSLOP lop ON sv.MALO = lop.MALO
+    JOIN HEDT he   ON lop.MAHE = he.MAHE
+
+    LEFT JOIN THUHP th
+        ON th.MASV = sv.MASV
+       AND th.MAHP = @MAHP
+
+    GROUP BY
+        lop.MALO, lop.TENLOP,
+        sv.MASV, sv.HOTEN,
+        he.HPCB
+
+    HAVING (he.HPCB - ISNULL(SUM(th.SOTIEN), 0)) > 0   -- chỉ lấy SV còn nợ
+
+    ORDER BY lop.MALO, sv.MASV;
+END
+GO
+EXEC P_BC_SV_CONNO_HOCPHI 'HK2';
+SELECT MAHP, KYHP FROM HOCPHI ORDER BY MAHP;
+
+
+CREATE OR ALTER PROCEDURE P_BC_DOANHTHU_THEO_HE_LOP
+    @MAHP CHAR(10) = NULL   -- NULL = tất cả học kỳ
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        he.MAHE,
+        he.TENHE,
+
+        lop.MALO,
+        lop.TENLOP,
+
+        -- ✅ số sinh viên đã đóng (đếm SV có phát sinh thu)
+        SoSV_DaDong = COUNT(DISTINCT th.MASV),
+
+        -- ✅ tổng tiền thu được
+        TongTienThu = ISNULL(SUM(th.SOTIEN), 0)
+    FROM HEDT he
+    JOIN DSLOP lop ON lop.MAHE = he.MAHE
+    JOIN DSSV sv   ON sv.MALO = lop.MALO
+
+    -- chỉ những khoản đã thu mới tính doanh thu
+    LEFT JOIN THUHP th
+        ON th.MASV = sv.MASV
+       AND (@MAHP IS NULL OR th.MAHP = @MAHP)
+
+    GROUP BY
+        he.MAHE, he.TENHE,
+        lop.MALO, lop.TENLOP
+
+    ORDER BY he.MAHE, lop.MALO;
+END
+GO
+EXEC P_BC_DOANHTHU_THEO_HE_LOP 'HK1';
+EXEC P_BC_DOANHTHU_THEO_HE_LOP;   -- tất cả học kỳ
+
 IF OBJECT_ID('dbo.USERS','U') IS NULL
 BEGIN
     CREATE TABLE dbo.[USERS]

@@ -15,7 +15,7 @@ namespace GUI
         private bool isAdding = false;
         private readonly DSSV_BLL svBLL = new DSSV_BLL();
 
-        // ====== SQL Connection cho LookupEdit ======
+       
         private SqlConnection conn = null;
         private readonly string ctrConn =
             @"server=(localdb)\MSSQLLocalDB;Database=QuanLyThuHocPhi;Integrated Security=true";
