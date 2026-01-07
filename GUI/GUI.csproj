@@ -105,6 +105,12 @@
     <Compile Include="frmHEDT.Designer.cs">
       <DependentUpon>frmHEDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHEDT.resx">
       <DependentUpon>frmHEDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -242,6 +251,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocustomer_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofolder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printincludeevaluations_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -48,7 +48,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(212, 232);
+            this.label5.Location = new System.Drawing.Point(55, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 17);
             this.label5.TabIndex = 31;
@@ -56,7 +56,7 @@ namespace GUI
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(383, 227);
+            this.txtFullName.Location = new System.Drawing.Point(226, 186);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(125, 22);
             this.txtFullName.TabIndex = 30;
@@ -64,7 +64,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(265, 185);
+            this.label4.Location = new System.Drawing.Point(108, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 17);
             this.label4.TabIndex = 29;
@@ -72,7 +72,7 @@ namespace GUI
             // 
             // txtNewPass
             // 
-            this.txtNewPass.Location = new System.Drawing.Point(383, 182);
+            this.txtNewPass.Location = new System.Drawing.Point(226, 141);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(125, 22);
             this.txtNewPass.TabIndex = 28;
@@ -80,7 +80,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 144);
+            this.label2.Location = new System.Drawing.Point(115, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 27;
@@ -89,7 +89,7 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(288, 92);
+            this.label1.Location = new System.Drawing.Point(131, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 26;
@@ -97,7 +97,7 @@ namespace GUI
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(414, 298);
+            this.btnBack.Location = new System.Drawing.Point(257, 257);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 29);
             this.btnBack.TabIndex = 25;
@@ -105,7 +105,7 @@ namespace GUI
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(294, 298);
+            this.btnChange.Location = new System.Drawing.Point(137, 257);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(94, 29);
             this.btnChange.TabIndex = 24;
@@ -113,14 +113,14 @@ namespace GUI
             // 
             // txtOldPass
             // 
-            this.txtOldPass.Location = new System.Drawing.Point(383, 141);
+            this.txtOldPass.Location = new System.Drawing.Point(226, 100);
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.Size = new System.Drawing.Size(125, 22);
             this.txtOldPass.TabIndex = 23;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(383, 89);
+            this.txtUser.Location = new System.Drawing.Point(226, 48);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(125, 22);
             this.txtUser.TabIndex = 22;
@@ -129,7 +129,7 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 466);
+            this.ClientSize = new System.Drawing.Size(426, 367);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.label4);
@@ -141,7 +141,7 @@ namespace GUI
             this.Controls.Add(this.txtOldPass);
             this.Controls.Add(this.txtUser);
             this.Name = "frmChangePassword";
-            this.Text = "frmChangePassword";
+            this.Text = "Đổi mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNewPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOldPass.Properties)).EndInit();

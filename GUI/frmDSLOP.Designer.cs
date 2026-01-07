@@ -169,7 +169,7 @@ namespace GUI
             this.groupBox1.Controls.Add(this.txtTenLop);
             this.groupBox1.Location = new System.Drawing.Point(81, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(698, 101);
+            this.groupBox1.Size = new System.Drawing.Size(759, 101);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
@@ -177,7 +177,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(473, 37);
+            this.label2.Location = new System.Drawing.Point(515, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 19;
@@ -185,18 +185,22 @@ namespace GUI
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(534, 34);
+            this.lookUpEdit1.Location = new System.Drawing.Point(566, 34);
             this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(125, 22);
+            this.lookUpEdit1.Size = new System.Drawing.Size(156, 28);
             this.lookUpEdit1.TabIndex = 18;
             // 
             // txtMaLop
             // 
             this.txtMaLop.Location = new System.Drawing.Point(79, 34);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(125, 22);
+            this.txtMaLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaLop.Properties.Appearance.Options.UseFont = true;
+            this.txtMaLop.Size = new System.Drawing.Size(147, 28);
             this.txtMaLop.TabIndex = 17;
             // 
             // label6
@@ -211,7 +215,7 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 37);
+            this.label1.Location = new System.Drawing.Point(232, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 3;
@@ -221,14 +225,16 @@ namespace GUI
             // 
             this.txtTenLop.Location = new System.Drawing.Point(307, 34);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(125, 22);
+            this.txtTenLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenLop.Properties.Appearance.Options.UseFont = true;
+            this.txtTenLop.Size = new System.Drawing.Size(184, 28);
             this.txtTenLop.TabIndex = 2;
             // 
             // frmDSLOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 494);
+            this.ClientSize = new System.Drawing.Size(1149, 620);
             this.Controls.Add(this.gcDSLOP);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnCancel);
@@ -238,7 +244,7 @@ namespace GUI
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDSLOP";
-            this.Text = "frmDSLOP";
+            this.Text = "Danh sách lớp";
             ((System.ComponentModel.ISupportInitialize)(this.gcDSLOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDSLOP)).EndInit();
             this.groupBox1.ResumeLayout(false);

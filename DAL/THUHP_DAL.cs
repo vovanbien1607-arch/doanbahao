@@ -42,7 +42,7 @@ namespace DAL
 
         public void Update(THUHP item)
         {
-            // Update theo PK kép
+            
             var exist = db.THUHP.FirstOrDefault(x => x.MASV == item.MASV && x.MAHP == item.MAHP);
             if (exist == null) throw new Exception("Không tìm thấy dữ liệu để cập nhật!");
 

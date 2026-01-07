@@ -18,7 +18,6 @@ namespace BLL
         {
             dal.Insert(sv);
 
-            // Nếu có chọn học kỳ → tạo bản ghi THUHP đầu tiên
             if (!string.IsNullOrWhiteSpace(maHP))
             {
                 using (var db = new QLTHPcontext())
@@ -28,7 +27,7 @@ namespace BLL
                         MASV = sv.MASV,
                         MAHP = maHP,
                         NGAYTHU = DateTime.Today,
-                        SOTIEN = 0, // Có thể lấy từ bảng HOCPHI nếu cần
+                        SOTIEN = 0, 
                        
                     };
                     db.THUHP.Add(thuHP);
@@ -41,7 +40,7 @@ namespace BLL
         {
             dal.Update(sv);
 
-            // Nếu người dùng chọn học kỳ mới → thêm bản ghi THUHP nếu chưa có cho kỳ đó
+           
             if (!string.IsNullOrWhiteSpace(maHP))
             {
                 using (var db = new QLTHPcontext())

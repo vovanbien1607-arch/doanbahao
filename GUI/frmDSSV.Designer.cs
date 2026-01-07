@@ -342,7 +342,7 @@ namespace GUI
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDSSV";
-            this.Text = "frmDSSV";
+            this.Text = "Danh sách sinh viên";
             this.Load += new System.EventHandler(this.frmDSSV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcDSSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDSSV)).EndInit();

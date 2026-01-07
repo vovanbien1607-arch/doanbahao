@@ -33,17 +33,23 @@ namespace GUI
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReport_BaoCaoDoanhThu));
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailData1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DetailData3_Odd = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GrandTotalCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GrandTotalData1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.GrandTotalBackground1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -63,6 +69,11 @@ namespace GUI
             this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.panel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label5 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -92,12 +103,12 @@ namespace GUI
             // 
             // DetailCaption1
             // 
-            this.DetailCaption1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(148)))), ((int)(((byte)(130)))));
+            this.DetailCaption1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(212)))), ((int)(((byte)(246)))));
             this.DetailCaption1.BorderColor = System.Drawing.Color.White;
             this.DetailCaption1.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.DetailCaption1.BorderWidth = 2F;
             this.DetailCaption1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.DetailCaption1.ForeColor = System.Drawing.Color.White;
+            this.DetailCaption1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.DetailCaption1.Name = "DetailCaption1";
             this.DetailCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             this.DetailCaption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -124,6 +135,32 @@ namespace GUI
             this.DetailData3_Odd.Name = "DetailData3_Odd";
             this.DetailData3_Odd.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             this.DetailData3_Odd.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // GrandTotalCaption1
+            // 
+            this.GrandTotalCaption1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.GrandTotalCaption1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GrandTotalCaption1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
+            this.GrandTotalCaption1.Name = "GrandTotalCaption1";
+            this.GrandTotalCaption1.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 0, 0, 100F);
+            this.GrandTotalCaption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // GrandTotalData1
+            // 
+            this.GrandTotalData1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.GrandTotalData1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GrandTotalData1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.GrandTotalData1.Name = "GrandTotalData1";
+            this.GrandTotalData1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 6, 0, 0, 100F);
+            this.GrandTotalData1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // GrandTotalBackground1
+            // 
+            this.GrandTotalBackground1.BackColor = System.Drawing.Color.White;
+            this.GrandTotalBackground1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.GrandTotalBackground1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GrandTotalBackground1.BorderWidth = 2F;
+            this.GrandTotalBackground1.Name = "GrandTotalBackground1";
             // 
             // PageInfo
             // 
@@ -165,6 +202,13 @@ namespace GUI
             this.Detail.HeightF = 25F;
             this.Detail.Name = "Detail";
             // 
+            // ReportFooter
+            // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.panel1});
+            this.ReportFooter.HeightF = 49.38444F;
+            this.ReportFooter.Name = "ReportFooter";
+            // 
             // pageInfo1
             // 
             this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 5F);
@@ -188,7 +232,7 @@ namespace GUI
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(640F, 24.19433F);
             this.label1.StyleName = "Title";
-            this.label1.Text = "Báo cáo Tổng Hợp Doanh Thu Theo Lớp/Hệ";
+            this.label1.Text = "Báo cáo tổng hợp doanh thu theo Lớp/Hệ";
             // 
             // table1
             // 
@@ -333,6 +377,64 @@ namespace GUI
             this.tableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.tableCell12.Weight = 0.23273827185997595D;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.label2,
+            this.label3,
+            this.label4,
+            this.label5});
+            this.panel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.panel1.Name = "panel1";
+            this.panel1.SizeF = new System.Drawing.SizeF(650F, 49.38444F);
+            this.panel1.StyleName = "GrandTotalBackground1";
+            // 
+            // label2
+            // 
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(340.1503F, 11.5F);
+            this.label2.Name = "label2";
+            this.label2.SizeF = new System.Drawing.SizeF(48.73639F, 14.88444F);
+            this.label2.StyleName = "GrandTotalCaption1";
+            this.label2.Text = "COUNT";
+            // 
+            // label3
+            // 
+            this.label3.CanGrow = false;
+            this.label3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumCount([SoSV_DaDong])")});
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(388.8867F, 11.5F);
+            this.label3.Name = "label3";
+            this.label3.SizeF = new System.Drawing.SizeF(109.8334F, 14.88444F);
+            this.label3.StyleName = "GrandTotalData1";
+            this.label3.StylePriority.UseTextAlignment = false;
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.label3.Summary = xrSummary1;
+            this.label3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.label3.WordWrap = false;
+            // 
+            // label4
+            // 
+            this.label4.LocationFloat = new DevExpress.Utils.PointFloat(498.7201F, 11.5F);
+            this.label4.Name = "label4";
+            this.label4.SizeF = new System.Drawing.SizeF(33.46234F, 14.88444F);
+            this.label4.StyleName = "GrandTotalCaption1";
+            this.label4.Text = "SUM";
+            // 
+            // label5
+            // 
+            this.label5.CanGrow = false;
+            this.label5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TongTienThu])")});
+            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(532.1825F, 11.5F);
+            this.label5.Name = "label5";
+            this.label5.SizeF = new System.Drawing.SizeF(117.8175F, 14.88444F);
+            this.label5.StyleName = "GrandTotalData1";
+            this.label5.StylePriority.UseTextAlignment = false;
+            xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.label5.Summary = xrSummary2;
+            this.label5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.label5.WordWrap = false;
+            // 
             // XtraReport_BaoCaoDoanhThu
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -340,7 +442,8 @@ namespace GUI
             this.BottomMargin,
             this.ReportHeader,
             this.GroupHeader1,
-            this.Detail});
+            this.Detail,
+            this.ReportFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
             this.DataMember = "P_BC_DOANHTHU_THEO_HE_LOP";
@@ -351,6 +454,9 @@ namespace GUI
             this.DetailCaption1,
             this.DetailData1,
             this.DetailData3_Odd,
+            this.GrandTotalCaption1,
+            this.GrandTotalData1,
+            this.GrandTotalBackground1,
             this.PageInfo});
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
@@ -366,6 +472,9 @@ namespace GUI
         private DevExpress.XtraReports.UI.XRControlStyle DetailCaption1;
         private DevExpress.XtraReports.UI.XRControlStyle DetailData1;
         private DevExpress.XtraReports.UI.XRControlStyle DetailData3_Odd;
+        private DevExpress.XtraReports.UI.XRControlStyle GrandTotalCaption1;
+        private DevExpress.XtraReports.UI.XRControlStyle GrandTotalData1;
+        private DevExpress.XtraReports.UI.XRControlStyle GrandTotalBackground1;
         private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
@@ -391,5 +500,11 @@ namespace GUI
         private DevExpress.XtraReports.UI.XRTableCell tableCell10;
         private DevExpress.XtraReports.UI.XRTableCell tableCell11;
         private DevExpress.XtraReports.UI.XRTableCell tableCell12;
+        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
+        private DevExpress.XtraReports.UI.XRPanel panel1;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label3;
+        private DevExpress.XtraReports.UI.XRLabel label4;
+        private DevExpress.XtraReports.UI.XRLabel label5;
     }
 }

@@ -20,7 +20,6 @@ namespace GUI
         private readonly string ctrConn =
             @"server=(localdb)\MSSQLLocalDB;Database=QuanLyThuHocPhi;Integrated Security=true";
 
-        // ====== Lookup repo cho Grid (MAHP -> KYHP) ======
         private RepositoryItemLookUpEdit repoKyHP = null;
 
         public frmDSSV()
@@ -103,10 +102,8 @@ namespace GUI
             gcDSSV.RefreshDataSource();
             gvDSSV.BestFitColumns();
 
-            // ✅ QUAN TRỌNG: Tắt chỉnh sửa trực tiếp trên grid để tránh lỗi update anonymous type
             gvDSSV.OptionsBehavior.Editable = false;
-            // Tùy chọn: làm grid chỉ đọc hoàn toàn
-            // gvDSSV.OptionsBehavior.ReadOnly = true;
+           
         }
 
         private void SetupKyHocPhi_LookUpEdit_ForGrid()

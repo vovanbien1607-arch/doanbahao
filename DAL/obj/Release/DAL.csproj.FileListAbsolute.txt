@@ -1,0 +1,12 @@
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\DAL.dll.config
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\DAL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\EntityFramework.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\EntityFramework.xml
+D:\WinDows Forms\Đồ án\QLTHP\DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Release\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\DAL\obj\Release\DAL.pdb

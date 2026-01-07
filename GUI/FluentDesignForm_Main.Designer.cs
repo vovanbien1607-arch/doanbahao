@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FluentDesignForm_Main));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -45,9 +46,12 @@ namespace GUI
             this.acBaocaodoanhthu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acThongkehocphi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acDssvnohp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acHelp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentDesignFormContainer2 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +61,7 @@ namespace GUI
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 39);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(918, 614);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1216, 701);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // accordionControl1
@@ -67,11 +71,12 @@ namespace GUI
             this.accordionControlElement1,
             this.acGroupDanhMuc,
             this.accordionControlElement2,
+            this.acHelp,
             this.accordionControlElement3});
             this.accordionControl1.Location = new System.Drawing.Point(0, 39);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 614);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 701);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -131,6 +136,7 @@ namespace GUI
             // 
             // aceDssv
             // 
+            this.aceDssv.ImageOptions.Image = global::GUI.Properties.Resources.team_32x32;
             this.aceDssv.Name = "aceDssv";
             this.aceDssv.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceDssv.Text = "Danh sách sinh viên";
@@ -138,6 +144,7 @@ namespace GUI
             // 
             // aceDSL
             // 
+            this.aceDSL.ImageOptions.Image = global::GUI.Properties.Resources.copy_32x32;
             this.aceDSL.Name = "aceDSL";
             this.aceDSL.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceDSL.Text = "Danh sách lớp";
@@ -145,6 +152,11 @@ namespace GUI
             // 
             // aceHedt
             // 
+            this.aceHedt.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.aceHedt.Name = "aceHedt";
             this.aceHedt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceHedt.Text = "Hệ đào tạo";
@@ -152,6 +164,7 @@ namespace GUI
             // 
             // aceThhp
             // 
+            this.aceThhp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceThhp.ImageOptions.Image")));
             this.aceThhp.Name = "aceThhp";
             this.aceThhp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceThhp.Text = "Thu học phí";
@@ -164,11 +177,13 @@ namespace GUI
             this.acThongkehocphi,
             this.acDssvnohp});
             this.accordionControlElement2.Expanded = true;
+            this.accordionControlElement2.ImageOptions.Image = global::GUI.Properties.Resources.product_32x32;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Thống kê";
             // 
             // acBaocaodoanhthu
             // 
+            this.acBaocaodoanhthu.ImageOptions.Image = global::GUI.Properties.Resources.bofileattachment_32x322;
             this.acBaocaodoanhthu.Name = "acBaocaodoanhthu";
             this.acBaocaodoanhthu.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acBaocaodoanhthu.Text = "Báo cao doanh thu";
@@ -176,6 +191,7 @@ namespace GUI
             // 
             // acThongkehocphi
             // 
+            this.acThongkehocphi.ImageOptions.Image = global::GUI.Properties.Resources.bofileattachment_32x32;
             this.acThongkehocphi.Name = "acThongkehocphi";
             this.acThongkehocphi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acThongkehocphi.Text = "Thống kê học phí";
@@ -183,13 +199,22 @@ namespace GUI
             // 
             // acDssvnohp
             // 
+            this.acDssvnohp.ImageOptions.Image = global::GUI.Properties.Resources.bofileattachment_32x321;
             this.acDssvnohp.Name = "acDssvnohp";
             this.acDssvnohp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.acDssvnohp.Text = "DSSV nợ học phí";
             this.acDssvnohp.Click += new System.EventHandler(this.acDssvnohp_Click);
             // 
+            // acHelp
+            // 
+            this.acHelp.ImageOptions.Image = global::GUI.Properties.Resources.index_32x32;
+            this.acHelp.Name = "acHelp";
+            this.acHelp.Text = "Help";
+            this.acHelp.Click += new System.EventHandler(this.acHelp_Click);
+            // 
             // accordionControlElement3
             // 
+            this.accordionControlElement3.ImageOptions.Image = global::GUI.Properties.Resources.cancel_32x32;
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Text = "Thoát";
             this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
@@ -199,7 +224,7 @@ namespace GUI
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1178, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1476, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -208,14 +233,24 @@ namespace GUI
             this.fluentDesignFormContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer2.Location = new System.Drawing.Point(0, 39);
             this.fluentDesignFormContainer2.Name = "fluentDesignFormContainer2";
-            this.fluentDesignFormContainer2.Size = new System.Drawing.Size(1178, 614);
+            this.fluentDesignFormContainer2.Size = new System.Drawing.Size(1476, 701);
             this.fluentDesignFormContainer2.TabIndex = 3;
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Text = "Element5";
+            // 
+            // accordionControlElement4
+            // 
+            this.accordionControlElement4.Name = "accordionControlElement4";
+            this.accordionControlElement4.Text = "Element4";
             // 
             // FluentDesignForm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 653);
+            this.ClientSize = new System.Drawing.Size(1476, 740);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
@@ -251,5 +286,8 @@ namespace GUI
         private DevExpress.XtraBars.Navigation.AccordionControlElement acBaocaodoanhthu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acThongkehocphi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acDssvnohp;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acHelp;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
     }
 }

@@ -308,7 +308,7 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 497);
+            this.ClientSize = new System.Drawing.Size(1156, 675);
             this.Controls.Add(this.gcTHUHP);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnCancel);
@@ -318,7 +318,7 @@ namespace GUI
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTHUHP";
-            this.Text = "frmTHUHP";
+            this.Text = "Thu học phí";
             ((System.ComponentModel.ISupportInitialize)(this.gcTHUHP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTHUHP)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -29,8 +29,20 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportViewer));
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.SuspendLayout();
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // documentViewer1
             // 
@@ -55,6 +67,7 @@ namespace GUI
 
         #endregion
 
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
     }
 }

@@ -35,7 +35,7 @@ namespace DAL
                      sv.MALO,
                      sv.DIENUIT,
 
-             // ✅ thêm vào grid
+        
              MAHP = (lastThu == null ? null : lastThu.MAHP),
                      KYHP = ky
                  }).ToList();

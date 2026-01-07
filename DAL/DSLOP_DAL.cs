@@ -7,10 +7,9 @@ namespace DAL
 {
     public class DSLOP_DAL
     {
-        // Kết nối bằng DbContext (EF)
+
         QLTHPcontext db = new QLTHPcontext();
 
-        // Lấy danh sách lớp + kèm tên hệ (TENHE) để hiển thị trên Grid
         public IEnumerable GetListDSLOP()
         {
             var list =

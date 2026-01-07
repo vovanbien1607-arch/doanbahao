@@ -4,7 +4,7 @@ using DAL.Model;
 
 namespace BLL
 {
-    // thang BIen Lo
+    
     public class DSLOP_BLL
     {
         DSLOP_DAL dal = new DSLOP_DAL();

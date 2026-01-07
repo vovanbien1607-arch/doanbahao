@@ -1,0 +1,11 @@
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\BLL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\BLL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\DAL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\DAL.pdb
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\DAL.dll.config
+D:\WinDows Forms\Đồ án\QLTHP\BLL\bin\Release\EntityFramework.xml
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Release\BLL.csproj.CopyComplete
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Release\BLL.dll
+D:\WinDows Forms\Đồ án\QLTHP\BLL\obj\Release\BLL.pdb
