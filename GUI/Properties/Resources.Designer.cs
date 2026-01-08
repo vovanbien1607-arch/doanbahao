@@ -133,6 +133,66 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x323 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x324 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x325 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x325", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x326 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x326", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x327 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x327", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bofileattachment_32x328 {
+            get {
+                object obj = ResourceManager.GetObject("bofileattachment_32x328", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bofolder_32x32 {
             get {
                 object obj = ResourceManager.GetObject("bofolder_32x32", resourceCulture);
@@ -176,6 +236,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap copy_32x32 {
             get {
                 object obj = ResourceManager.GetObject("copy_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap differentoddevenpages_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("differentoddevenpages_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

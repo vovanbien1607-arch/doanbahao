@@ -35,27 +35,41 @@
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.2.Win, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v19.2" />
     <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.2" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core" />
     <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Presets, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Win, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -150,17 +164,53 @@
     <Compile Include="XtraReport_BaoCaoDoanhThu.Designer.cs">
       <DependentUpon>XtraReport_BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraReport_DSSVnoHP.cs">
+    <Compile Include="XtraReport_BC_HOCPHI_THEO_LOP.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="XtraReport_DSSVnoHP.Designer.cs">
-      <DependentUpon>XtraReport_DSSVnoHP.cs</DependentUpon>
+    <Compile Include="XtraReport_BC_HOCPHI_THEO_LOP.Designer.cs">
+      <DependentUpon>XtraReport_BC_HOCPHI_THEO_LOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_CHI_TIET_MIEN_GIAM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_CHI_TIET_MIEN_GIAM.Designer.cs">
+      <DependentUpon>XtraReport_CHI_TIET_MIEN_GIAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_DSSVconNoHP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_DSSVconNoHP.Designer.cs">
+      <DependentUpon>XtraReport_DSSVconNoHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_SinhVienConNoHP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_SinhVienConNoHP.Designer.cs">
+      <DependentUpon>XtraReport_SinhVienConNoHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_THEO_DIEN_MIEN_GIAM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_THEO_DIEN_MIEN_GIAM.Designer.cs">
+      <DependentUpon>XtraReport_THEO_DIEN_MIEN_GIAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_ThongKeHocPhi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_ThongKeHocPhi.Designer.cs">
+      <DependentUpon>XtraReport_ThongKeHocPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="XtraReport_ThuHocPhi.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XtraReport_ThuHocPhi.Designer.cs">
       <DependentUpon>XtraReport_ThuHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport_TONG_HOP_NO_LOP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport_TONG_HOP_NO_LOP.Designer.cs">
+      <DependentUpon>XtraReport_TONG_HOP_NO_LOP.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FluentDesignForm_Main.resx">
       <DependentUpon>FluentDesignForm_Main.cs</DependentUpon>
@@ -209,11 +259,29 @@
     <EmbeddedResource Include="XtraReport_BaoCaoDoanhThu.resx">
       <DependentUpon>XtraReport_BaoCaoDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport_DSSVnoHP.resx">
-      <DependentUpon>XtraReport_DSSVnoHP.cs</DependentUpon>
+    <EmbeddedResource Include="XtraReport_BC_HOCPHI_THEO_LOP.resx">
+      <DependentUpon>XtraReport_BC_HOCPHI_THEO_LOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_CHI_TIET_MIEN_GIAM.resx">
+      <DependentUpon>XtraReport_CHI_TIET_MIEN_GIAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_DSSVconNoHP.resx">
+      <DependentUpon>XtraReport_DSSVconNoHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_SinhVienConNoHP.resx">
+      <DependentUpon>XtraReport_SinhVienConNoHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_THEO_DIEN_MIEN_GIAM.resx">
+      <DependentUpon>XtraReport_THEO_DIEN_MIEN_GIAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_ThongKeHocPhi.resx">
+      <DependentUpon>XtraReport_ThongKeHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport_ThuHocPhi.resx">
       <DependentUpon>XtraReport_ThuHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport_TONG_HOP_NO_LOP.resx">
+      <DependentUpon>XtraReport_TONG_HOP_NO_LOP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -284,6 +352,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\differentoddevenpages_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x327.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x328.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

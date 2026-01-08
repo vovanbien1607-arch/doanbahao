@@ -7,6 +7,7 @@ using DAL.Model;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraReports.UI;
 
 namespace GUI
 {
@@ -355,5 +356,7 @@ namespace GUI
 
             return true;
         }
+
+        
     }
 }

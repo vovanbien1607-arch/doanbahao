@@ -50,14 +50,14 @@ namespace GUI
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(784, 445);
+            this.documentViewer1.Size = new System.Drawing.Size(1116, 713);
             this.documentViewer1.TabIndex = 0;
             // 
             // frmReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 445);
+            this.ClientSize = new System.Drawing.Size(1116, 713);
             this.Controls.Add(this.documentViewer1);
             this.Name = "frmReportViewer";
             this.Text = "frmReportViewer";
